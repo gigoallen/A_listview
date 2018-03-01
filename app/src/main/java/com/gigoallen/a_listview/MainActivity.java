@@ -23,10 +23,21 @@ public class MainActivity extends AppCompatActivity {
 
         lstLOL.setAdapter(adapterLOL);
 
-        lstLOL.setOnItemClickListener(lstListener);
+        //lstLOL.setOnItemClickListener(lstListener);
+        lstLOL.setOnItemClickListener(
+                new ListView.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        msg = adapterView.getItemAtPosition(i).toString();
+                        msg += " , 我的LOL位置。";
+                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
 
     }
 
+    /*
     private ListView.OnItemClickListener lstListener =
             new ListView.OnItemClickListener(){
 
@@ -37,4 +48,5 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
                 }
             };
+            */
 }
