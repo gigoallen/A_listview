@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayLol">
+        <item>"上路"</item>
+        <item>"中路"</item>
+        <item>"下路"</item>
+        <item>"AD"</item>
+        <item>"SP"</item>
+    </string-array>
+</resources>
